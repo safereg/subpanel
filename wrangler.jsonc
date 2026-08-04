@@ -1,0 +1,21 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "subpanel",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-07-23",
+  "assets": {
+    "not_found_handling": "single-page-application"
+  },
+  "kv_namespaces": [
+    {
+      "binding": "DATA","id": "7ddac4672c024d029ebffebfa5050cf1"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  },
+  "triggers": {
+    "crons": ["*/15 * * * *"]
+  },
+  "upload_source_maps": true
+}
